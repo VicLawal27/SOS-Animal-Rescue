@@ -1,50 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width-device-width, initial-scale=1.0" />
-        <title>SOS Animal Rescue</title>
-        <link rel="stylesheet" href="/assets/css/style.css" />
-    </head>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+    <title>SOS Animal Rescue</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
 
-    <body>
-        <header>
-            <!--Application TItle-->
-            <h1>
-                SOS Animal Rescue
-            </h1>
-            <!--Navigation Bar-->
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#about-us">About Us</a>
-                    </li>
-                    <li>
-                        <a href="#browse">Browse Animals</a>
-                    </li>
-                    <li>
-                        <a href="#contact-us">Contact Us</a>
-                    </li>
-                </ul>
-            </nav>
+<body>
+    <header>
+        <!--Application TItle-->
+        <h1>
+            SOS Animal Rescue
+        </h1>
+        <!--Navigation Bar-->
+        <nav>
+            <ul>
+                <li>
+                    <a href="#about-us">About Us</a>
+                </li>
+                <li>
+                    <a href="#browse">Browse Animals</a>
+                </li>
+                <li>
+                    <a href="#contact-us">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+        <!--Signed up-->
+        <form> <section class="hero"></section>
+            <label for="name">Enter full name:</label>
+            <input type="text" placeholder="Your Name" name="name" id="name" />
+            <label for="email">Enter email address:</label>
+            <input type="text" placeholder="Email Address" name="email" id="email" />
+            <label for="phone">Enter a telephone number:</label>
+            <input type="text" placeholder="Phone Number" name="phone" id="phone"/>
+            <p>
+           </form>
 
-            <!--TODO: Add Search Bar-->
-            <form id="form" role="search"> 
-                <input type="search" id="query" name="q" placeholder="Search..."
-                aria-label="Search through site content">
-                <button>Search</button>
-              </form>
-            <!--About Section-->
-            <!--Animal Browse Section-->
-            <!--Contact Us Section-->
+        <!--TODO: Add Search Bar-->
+        <form id="form" role="search">
+            <input type="search" id="query" name="q" placeholder="Search..." aria-label="Search through site content">
+            <button>Search</button>
+        </form>
+        <script>
+            const f = document.getElementById('form');
+            const q = document.getElementById('query');
+            const google = 'https://www.google.com/search?q=site%3A+';
+            const site = 'pagedart.com';
 
-            <footer>
-                <h2>
-                    &#128151; Made with love by UCLA Extension
-                </h2>
-            </footer>
+            function submitted(event) {
+                event.preventDefault();
+                const url = google + site + '+' + q.value;
+                const win = window.open(url, '_blank');
+                win.focus();
+            }
 
-        </header>
-    </body>
+            f.addEventListener('submit', submitted);
+        </script>
+        <!--About Section-->
+        <!--Animal Browse Section-->
+        <!--Contact Us Section-->
+
+        <footer>
+            <h2>
+                &#128151; Made with love by UCLA Extension
+            </h2>
+        </footer>
+
+    </header>
+</body>
+
 </html>
