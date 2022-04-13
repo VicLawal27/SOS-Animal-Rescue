@@ -37,3 +37,14 @@ header nav a {
     color: black;
     float: right; 
 }
+footer {
+background-color: #642670;
+color: white;
+font-family: Tahoma, Verdana, sans-serif;
+position: absolute;
+left: 0;
+bottom: 0;
+height: 100px;
+width: 100%;
+overflow: hidden;
+}
