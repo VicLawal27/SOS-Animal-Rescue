@@ -37,6 +37,13 @@ header nav a {
     color: black;
     float: right; 
 }
+
+.logo{
+    width: 60px; 
+    height: 60px; 
+}
+
+
 footer {
 background-color: #642670;
 color: white;
