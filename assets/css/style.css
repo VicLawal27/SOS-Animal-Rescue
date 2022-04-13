@@ -35,23 +35,25 @@ header nav a {
     padding:10px;
     margin-left:50px; 
     color: black;
-    float: right; 
+    float: top-right; 
 }
 
 .logo{
     width: 60px; 
-    height: 60px; 
+    height: 60px;
 }
 
+
+/* Footer Styling */
 
 footer {
-background-color: #642670;
-color: white;
-font-family: Tahoma, Verdana, sans-serif;
-position: absolute;
-left: 0;
-bottom: 0;
-height: 100px;
-width: 100%;
-overflow: hidden;
-}
+    background-color: #642670;
+    color: white;
+    font-family: Tahoma, Verdana, sans-serif;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+    }
