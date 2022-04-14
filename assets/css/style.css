@@ -2,6 +2,14 @@
     box-sizing: border-box;
 }
 
+/* Color Coordination */
+:root {
+    --primary-color: #D9D2E9;
+    --secondary-color: #000000;
+    --tertiary-color: #EFEFEF;
+    --quaternary-color: #B4A7D6;
+}
+
 body{
     width: 100%;
     font-family: Tahoma, Verdana, sans-serif;
