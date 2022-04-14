@@ -6,6 +6,7 @@ body{
     width: 100%;
     font-family: Tahoma, Verdana, sans-serif;
     background-color: #fefaff;
+    background-image: url("../images/93768343-51D8-4ABF-A248-4D9D6071D141.PNG");
 }
 
 /* Header Section Styling  */
@@ -43,6 +44,56 @@ header nav a {
     height: 60px;
 }
 
+/* Form Styling */
+
+.hero {
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero-form {
+    background-color: #642670;
+    padding: 20px;
+    width: 400px;
+    color: white;
+    position: absolute;
+    bottom: 120px;
+    left: 50px;
+    border-radius: 25px;
+  }
+
+  .hero-form h3 {
+    font-size: 24px;
+    margin: 0;
+  }
+
+  .hero-form p {
+    margin: 5px 0 15px 0;
+  }
+
+  .form-input {
+    border: 1px solid #642670;
+    display: block;
+    padding: 7px 15px;
+    font-size: 16px;
+    color: white;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .hero-form label {
+    margin: 0 5px;
+  }
+
+  .hero-form button {
+    color: #ceabd4;
+    background-color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
 
 /* Footer Styling */
 
