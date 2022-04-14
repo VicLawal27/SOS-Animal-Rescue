@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width-device-width, initial-scale=1.0" />
     <title>SOS Animal Rescue</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
     <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
@@ -24,11 +24,10 @@
             <a href="#browse">Browse Animals</a>
             <a href="#contact-us">Contact Us</a>
         </nav>
-        <form class="form-inline">
-            <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
-                aria-label="Search"> 
-            <i class="fas fa-search" aria-hidden="true"></i>
-        </form>
+        <form id="form-search"> 
+            <input type="search" id="query" name="q" placeholder="Search...">
+            <button id="search-button">Search</button>
+          </form>
     </header>
 
     <!--TODO: Add Search Bar-->
@@ -55,56 +54,39 @@
     <!--Animal Browse Section-->
     <!--Contact Us Section-->
 
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
     <!-- Footer -->
-    <footer class="page-footer fixed-bottom">
-
-        <!-- Footer Elements -->
-        <div class="container">
-
-            <!--Grid row-->
-            <div class="row">
-
-                <!--Grid column-->
-                <div class="col-md-6 mb-4">
-
-                    <!-- Form -->
-                    <form class="form-inline">
-                        <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
-                            aria-label="Search">
-                        <i class="fas fa-search" aria-hidden="true"></i>
-                    </form>
-                    <!-- Form -->
-
-                </div>
-                <!--Grid column-->
-
-                <!--Grid column-->
-                <div class="col-md-6 mb-4">
-
-                    <form class="input-group">
-                        <input type="text" class="form-control form-control-sm" placeholder="Your email"
-                            aria-label="Your email" aria-describedby="basic-addon2">
-                        <div class="input-group-append">
-                            <button class="btn btn-sm btn-outline-white my-0" type="button">Sign up</button>
-                        </div>
-                    </form>
-
-                </div>
-                <!--Grid column-->
-
-            </div>
-            <!--Grid row-->
-
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>❤️ Made with love by UCLA extension</h3>
         </div>
-        <!-- Footer Elements -->
-
-        <div id="ucla" class="footer-copyright text-center py-3">© Made with love by UCLA Extension
-
-        </div>
-
+         <div class="footer-menu">
+            <ul class="f-menu">
+               <li><a href="">Home</a></li>
+               <li><a href="">About Us</a></li>
+               <li><a href="">Browse Animals</a></li>
+               <li><a href="">Contact Us</a></li>
+            </ul>
+           </div>
+           <div class="footer-bottom">
+            <p>copyright &copy;2022 <a href="#">SOSAnimalRescue</a></p>
+         </div>
     </footer>
+
     <!-- Footer -->
 
 </body>
-
 </html>
