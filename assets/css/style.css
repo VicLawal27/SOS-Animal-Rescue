@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    font-family: Tahoma, Verdana, sans-serif;
+    background-color: #fefaff;
+}
+
+/* Header Section Styling  */
+header  {
+    background-color: #e8e1e1;
+    color: black;
+    display: flex; 
+    flex-direction: row;
+    flex: wrap;
+    font-family: Tahoma, Verdana, sans-serif;
+}
+header h1 {
+    background-color: #642670;
+    color: white;
+    width:30%;
+    padding: 10px; 
+    border-radius: 25px;
+}
+header nav {
+    display: flex; 
+    flex-direction: row;
+    flex: wrap;
+    width: 50%;
+}
+
+header nav a {
+    padding:10px;
+    margin-left:50px; 
+    color: black;
+    float: right; 
+}
