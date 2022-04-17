@@ -9,7 +9,6 @@ body{
     background-image: url("../images/93768343-51D8-4ABF-A248-4D9D6071D141.PNG");
     min-height: 100vh;
 }
-
 /* Header Section Styling  */
 header  {
     background-color: #e8e1e1;
@@ -117,6 +116,7 @@ footer{
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    text-shadow: 0px 4px 10px rgba(179, 147, 211, 0.8)
 }
 
 .footer-content p{
