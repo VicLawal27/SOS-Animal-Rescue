@@ -15,7 +15,7 @@ var cityNameInput = $("#query").val();
 console.log(cityNameInput); 
 // console.log("URL", 'GET https://api.petfinder.com/v2/animals'+ cityNameInput+'&appid='+API_KEY); 
 // define base api url
-var baseURL = "https://cors-anywhere.herokuapp.com/https://api.petfinder.com/v2/animals";
+var baseURL = "api.petfinder.com/v2/animals";
 // fetch animals by location
 var options = {
     method: 'GET',
