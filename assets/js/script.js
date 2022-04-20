@@ -3,10 +3,11 @@ var token = JSON.parse(localStorage.getItem("access_key"));
 // console.log(token, "token from script js file")
 
 const {access_token } = token;
-
+''
 var searchBtn = $('#search-button');
 
-// res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,PATCH,OPTIONS');
+
+ res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,PATCH,OPTIONS');
 
 
 // function searchAnimals() {
@@ -72,5 +73,6 @@ console.log("Calling api ", access_token)
     }
   )
     .then((res) => res.json())
+    .then(res => console.log(res.headers))
      .then((data) => console.log(data.animals))
     .catch((err) => console.log(err));
