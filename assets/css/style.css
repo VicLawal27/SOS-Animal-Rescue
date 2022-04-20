@@ -118,10 +118,12 @@ footer {
     }
 
     #dog-fact {
+      width: 1170px;
+      height: auto;
       background-color: #642670;
       color: #e8e1e1;
       text-align: center;
-      margin: 50px 75px 25px 75px;
+      margin: 50px auto 25px auto;
       padding: 15px;
       border-radius: 10px;
     }
@@ -132,4 +134,10 @@ footer {
 
     #dog-fact p {
       font-size: 20px;
+    }
+
+    #dog-pic .card {
+      height: auto;
+      width: auto;
+      background-color: transparent;
     }
