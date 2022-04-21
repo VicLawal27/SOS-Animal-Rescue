@@ -2,10 +2,19 @@
     box-sizing: border-box;
 }
 
+/* Color Coordination */
+:root {
+    --primary-color: #D9D2E9;
+    --secondary-color: #000000;
+    --tertiary-color: #8585857c;
+    --quaternary-color: #B4A7D6;
+}
+
 body{
     width: 100%;
     font-family: Tahoma, Verdana, sans-serif;
     background-color: #fefaff;
+    background-image: url("../images/93768343-51D8-4ABF-A248-4D9D6071D141.PNG");
 }
 
 /* Header Section Styling  */
@@ -35,5 +44,130 @@ header nav a {
     padding:10px;
     margin-left:50px; 
     color: black;
-    float: right; 
+    float: top-right;
+    text-decoration: none;
+    font-size: 25px; 
 }
+
+header nav a:hover {
+  background-color: var(--primary-color);
+  text-decoration: none;
+}
+
+.logo{
+    width: 60px; 
+    height: 60px;
+}
+
+/* Form Styling */
+
+.hero {
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero-form {
+    background-color: #642670;
+    padding: 20px;
+    width: 400px;
+    color: white;
+    position: absolute;
+    bottom: 120px;
+    left: 50px;
+    border-radius: 25px;
+  }
+
+  .hero-form h3 {
+    font-size: 24px;
+    margin: 0;
+  }
+
+  .hero-form p {
+    margin: 5px 0 15px 0;
+  }
+
+  .form-input {
+    border: 1px solid #642670;
+    display: block;
+    padding: 7px 15px;
+    font-size: 16px;
+    color: white;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .hero-form label {
+    margin: 0 5px;
+  }
+
+  .hero-form button {
+    color: #ceabd4;
+    background-color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+
+  .hero-form button:hover {
+    background-color: var(--tertiary-color);
+  }
+
+/* Footer Styling */
+
+footer {
+    background-color: #642670;
+    color: white;
+    font-family: Tahoma, Verdana, sans-serif;
+    height: 100px;
+    width: 100%;
+    }
+
+    #dog-fact {
+      width: 1170px;
+      height: auto;
+      background-color: #642670;
+      color: #e8e1e1;
+      text-align: center;
+      margin: 50px auto 50px auto;
+      padding: 15px;
+      border-radius: 50px;
+    }
+
+    #dog-fact h2 {
+      text-decoration: underline;
+    }
+
+    #dog-fact p {
+      font-size: 20px;
+    }
+
+    #dog-fact button {
+      color: #ceabd4;
+      background-color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 10px;
+    }
+
+    #dog-fact button:hover {
+      background-color: var(--tertiary-color);
+    }
+
+    #dog-pic .card {
+      height: 500px;
+      width: auto;
+      background-color: transparent;
+      border: transparent;
+      display: flex;
+      align-items: center;
+    }
+
+    .card .image {
+      height: 450px;
+      display: flex;
+    }
+

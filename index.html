@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width-device-width, initial-scale=1.0" />
     <title>SOS Animal Rescue</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
@@ -13,26 +14,74 @@
         <!--Application TItle-->
         <h1>
             SOS Animal Rescue
+            <div>
+                <img class='logo' src="assets/images/image0-4.png" alt="logo" />
+            </div>
         </h1>
         <!--Navigation Bar-->
         <nav>
-                    <a href="#about-us">About Us</a>
-                    <a href="#browse">Browse Animals</a>
-                    <a href="#contact-us">Contact Us</a>
+            <a href="#about-us">About Us</a>
+            <a href="#browse">Browse Animals</a>
+            <a href="#contact-us">Contact Us</a>
         </nav>
+        <form class="form-inline">
+            <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
+                aria-label="Search"> 
+            <i class="fas fa-search" aria-hidden="true"></i>
+        </form>
     </header>
 
     <!--TODO: Add Search Bar-->
 
-    <!--About Section-->
+    <!--Sign Up Form-->
+    <section class="hero">
+        <div class="hero-form">
+            <h3>Sign Up For Updates</h3>
+            <p>Fill out this form to receive updates from us</p>
+            <form>
+                <label for="name">Enter full name:</label>
+                <input type="text" placeholder="Your Name" name="name" id="name" class="form-input" />
+                <label for="email">Enter email address:</label>
+                <input type="text" placeholder="Email Address" name="email" id="email" class="form-input" />
+                <label for="phone">Enter a telephone number:</label>
+                <input type="text" placeholder="Phone Number" name="phone" id="phone" class="form-input" />
+
+                <button type="submit">
+                    Sign Up!
+                </button>
+            </form>
+        </div>
+    </section>
+
+     <!--TODO: Add Random Dog Facts-->
+    <section class="facts">
+        <div id="dog-fact">
+            <h2>Random Dog Picture</h2>
+            <div id="dog-pic"></div>
+            <button id="new-pic">Load A Picture</button>
+        </div>
+    </section>
+
     <!--Animal Browse Section-->
     <!--Contact Us Section-->
 
+    <!-- Footer -->
     <footer>
-        <h2>
-            &#128151; Made with love by UCLA Extension
-        </h2>
+
+        <!-- Footer Elements -->
+        <div class="container">
+
+           
+        <!-- Footer Elements -->
+
+        <div id="ucla" class="footer-copyright text-center py-3">© Made with love by UCLA Extension
+
+        </div>
+
     </footer>
+    <!-- Footer -->
+
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
