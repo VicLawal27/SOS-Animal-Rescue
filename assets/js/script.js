@@ -1,8 +1,8 @@
 //Dog Facts API
-const DOG_FACTS_URL = 'https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=1';
+const DOG_FACTS_URL = 'https://dog-api.kinduff.com/api/facts?number=5';
 const DOG_PICS_URL = 'https://dog.ceo/api/breeds/image/random';
 
-
+const dogFactEl = document.getElementById('dog-fact');
 const dogPicEl = document.getElementById('dog-pic');
 const newPicBtn = document.getElementById('new-pic');
 
@@ -32,7 +32,29 @@ async function loadDogPic()  {
 
     dogPicEl.appendChild(columnEl);
 
+
+
 }
 
-loadDogPic();
+/*const options = {
+    headers: {
+        'Content-Type': 'text/plain',
+    },
+    mode: 'no-cors',
+    credentials: 'include',
+};
+
+async function loadDogFact() {
+    fetch(DOG_FACTS_URL , options, {
+        body:JSON.stringify(fact),
+    }).then(result => console.log('success====:', result))
+    .catch(error => console.log('error==========:', error));
+}*/
+
+function refreshGallery() {
+  
+}
+
+//loadDogFact();
+
 newPicBtn.addEventListener('click', loadDogPic);
