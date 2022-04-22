@@ -116,6 +116,14 @@ text-decoration: none;
   background-color: var(--tertiary-color);
 }
 
+/* Contact & About Us */
+
+.contact-form {
+  background-color: #e8e1e1;
+  color: black;
+  padding: 10px 20px;
+}
+
 /* Footer Styling */
 
 footer {
