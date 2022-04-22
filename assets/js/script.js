@@ -1,49 +1,60 @@
-// var API_KEY = 'B9jIb4yZiryaifQXKBzDgHBhE2AmwQ7a40glzNTEwWwdH43OHw';
-var token = localStorage.getItem("access_key");
-// console.log(token, "token from script js file")
+//Dog Facts API
+const DOG_FACTS_URL = 'https://dog-api.kinduff.com/api/facts?number=5';
+const DOG_PICS_URL = 'https://dog.ceo/api/breeds/image/random';
 
-const {access_token } = token;
+const dogFactEl = document.getElementById('dog-fact');
+const dogPicEl = document.getElementById('dog-pic');
+const newPicBtn = document.getElementById('new-pic');
 
-var searchBtn = $('#search-button');
+async function loadDogPic()  {
+    const response = await fetch(DOG_PICS_URL);
+    const json = await response.json();
+    console.log(json.message);
+    const dogImage = json.message;
+    const columnEl = document.createElement('div');
+    columnEl.classList.add('column');
+    
+    const cardEl = document.createElement('div');
+    cardEl.classList.add('card');
+    columnEl.appendChild(cardEl);
+
+    const cardImageEl = document.createElement('div');
+    cardImageEl.classList.add('card-image');
+    cardEl.appendChild(cardImageEl);
+
+    const figureEl = document.createElement('figure');
+    figureEl.classList.add('image');
+    cardImageEl.appendChild(figureEl);
+
+    const imageEl = document.createElement('img');
+    imageEl.src = dogImage;
+    figureEl.appendChild(imageEl);
+
+    dogPicEl.appendChild(columnEl);
 
 
-function searchAnimals() {
 
-    //1. fetch the animals of location selected
-    // https://api.openweathermap.org/data/2.5/weather?q=London&appid={API key}
-var cityNameInput = $("#query").val(); 
-console.log(cityNameInput); 
-// console.log("URL", 'GET https://api.petfinder.com/v2/animals'+ cityNameInput+'&appid='+API_KEY); 
-// define base api url
-var baseURL = "api.petfinder.com/v2/animals";
-// fetch animals by location
-var options = {
-    method: 'GET',
+}
+
+/*const options = {
     headers: {
-        "Authorization": `Bearer ${access_token}`,
-        "Access-Control-Allow-Origin": true,
-        mode: "cors"
-    }
+        'Content-Type': 'text/plain',
+    },
+    mode: 'no-cors',
+    credentials: 'include',
+};
+
+async function loadDogFact() {
+    fetch(DOG_FACTS_URL , options, {
+        body:JSON.stringify(fact),
+    }).then(result => console.log('success====:', result))
+    .catch(error => console.log('error==========:', error));
+}*/
+
+function refreshGallery() {
+  
 }
-fetch(`${baseURL}`, options).then(response => response.json()).then(data => console.log(data));
-// display on page
-    // fetch('GET https://api.petfinder.com/v2/animals'+ cityNameInput+'&appid='+API_KEY)
-    // .then(response => response.json())
-    // .then(data => {
-    //     console.log(data); 
-    //     var location = data.location.city; 
-    //     var API_URL = 'GET https://api.petfinder.com/v2/animals'+ location +'&appid='+API_KEY;
-    
-    
-    // })
-}
 
+//loadDogFact();
 
-    console.log("Testingthe function ");
-
-
-    //event listener 
- searchBtn.on('click', function (event) {
-    event.preventDefault();
-    searchAnimals()
- }); 
+newPicBtn.addEventListener('click', loadDogPic);
