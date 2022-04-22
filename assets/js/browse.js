@@ -1,3 +1,5 @@
+var API_KEY = 'c9d9574f-2b6b-4721-a9cf-bcec0137f7b5';
+
 var $breed_select = $('select.breed_select');
 $breed_select.change(function() {
   var id = $(this).children(":selected").attr("id");
