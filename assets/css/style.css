@@ -3,17 +3,19 @@
 }
 
 body{
-    width: 100%;
-    font-family: Tahoma, Verdana, sans-serif;
-    background-color: #fefaff;
-    background-image: url("../images/93768343-51D8-4ABF-A248-4D9D6071D141.PNG");
-    min-height: 100vh;
+  width: 100%;
+  font-family: Tahoma, Verdana, sans-serif;
+  /* background-color: #fefaff;
+  background-image: url("../images/93768343-51D8-4ABF-A248-4D9D6071D141.PNG"); */
+  min-height: 100vh;
 }
+
+
 /* Header Section Styling  */
 header  {
     background-color: #e8e1e1;
     color: black;
-    display: flex; 
+    display: flex;  
     flex-direction: row;
     flex: wrap;
     font-family: Tahoma, Verdana, sans-serif;
@@ -44,6 +46,63 @@ header nav a {
     height: 60px;
 }
 
+
+/* Dog Image Section */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.app {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.dogtitle {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.dogtitle h1 {
+  margin: 0 0 10px 0;
+}
+
+.dogtitle select {
+  font-size: 1rem;
+}
+
+.slideshow {
+  flex: 1;
+  background-color: #333;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  opacity: 0;
+  transform: scale(1);
+  transition: all .9s ease-out;
+}
+
+.slide:nth-last-child(2) {
+  opacity: 1;
+  transform: scale(1.08);
+}
 
 /* Form Styling */
 
@@ -96,6 +155,10 @@ header nav a {
     font-size: 16px;
     border-radius: 25px;
   }
+
+
+
+
 
 /* Footer Styling */
 

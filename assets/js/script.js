@@ -1,13 +1,87 @@
-var API_KEY = 'B9jIb4yZiryaifQXKBzDgHBhE2AmwQ7a40glzNTEwWwdH43OHw';
-var token = JSON.parse(localStorage.getItem("access_key"));
+//var API_KEY = 'B9jIb4yZiryaifQXKBzDgHBhE2AmwQ7a40glzNTEwWwdH43OHw';
+//var token = JSON.parse(localStorage.getItem("access_key"));
 // console.log(token, "token from script js file")
 
-const {access_token } = token;
+//const { access_token } = token;
 ''
-var searchBtn = $('#search-button');
+//var searchBtn = $('#search-button');
 
 
- res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,PATCH,OPTIONS');
+// res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,PATCH,OPTIONS');
+
+// DOG PICS
+
+let timer
+let deleteFirstPhotoDelay
+
+async function start() {
+  try {
+    const response = await fetch("https://dog.ceo/api/breeds/list/all")
+    const data = await response.json()
+    createBreedList(data.message)
+  } catch (e) {
+    console.log("There was a problem fetching the breed list.")
+  }
+}
+
+start()
+
+function createBreedList(breedList) {
+  document.getElementById("breed").innerHTML = `
+  <select onchange="loadByBreed(this.value)">
+        <option>Choose a dog breed</option>
+        ${Object.keys(breedList).map(function (breed) {
+          return `<option>${breed}</option>`
+        }).join('')}
+      </select>
+  `
+}
+
+async function loadByBreed(breed) {
+  if (breed != "Choose a dog breed") {
+    const response = await fetch(`https://dog.ceo/api/breed/${breed}/images`)
+    const data = await response.json()
+    createSlideshow(data.message)
+  }
+}
+
+function createSlideshow(images) {
+  let currentPosition = 0
+  clearInterval(timer)
+  clearTimeout(deleteFirstPhotoDelay)
+  
+  if (images.length > 1) {
+    document.getElementById("slideshow").innerHTML = `
+  <div class="slide" style="background-image: url('${images[0]}')"></div>
+  <div class="slide" style="background-image: url('${images[1]}')"></div>
+  `
+  currentPosition += 2
+  if (images.length == 2) currentPosition = 0
+  timer = setInterval(nextSlide, 3000)
+  } else {
+    document.getElementById("slideshow").innerHTML = `
+  <div class="slide" style="background-image: url('${images[0]}')"></div>
+  <div class="slide"></div>
+  `
+  }
+
+  function nextSlide() {
+    document.getElementById("slideshow").insertAdjacentHTML("beforeend", `<div class="slide" style="background-image: url('${images[currentPosition]}')"></div>`)
+    deleteFirstPhotoDelay = setTimeout(function () {
+      document.querySelector(".slide").remove()
+    }, 1000)
+    if (currentPosition + 1 >= images.length) {
+      currentPosition = 0
+    } else {
+      currentPosition++
+    }
+  }
+}
+
+
+
+// DOG PICS
+
 
 
 // function searchAnimals() {
@@ -41,8 +115,8 @@ var searchBtn = $('#search-button');
 //     //     console.log(data); 
 //     //     var location = data.location.city; 
 //     //     var API_URL = 'GET https://api.petfinder.com/v2/animals'+ location +'&appid='+API_KEY;
-    
-    
+
+
 //     // })
 // }
 
@@ -54,25 +128,26 @@ var searchBtn = $('#search-button');
 //  searchBtn.on('click', function (event) {
 //     event.preventDefault();
 //     searchAnimals()
-//  }); 
+// });
 
-console.log("Calling api ", access_token)
- fetch(
-    `https://api.petfinder.com/v2/animals?key=${API_KEY}&location=Atlanta,Georgia&type=dog`,
-    {
+//HERE
 
-        mode: 'cors', 
-      headers: {
-        Authorization: `Bearer ${access_token}`,
-        "Access-Control-Allow-Origin": "*",
-        'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
-        'Content-Type': 'application/json',
-        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
-      },
-      method: 'GET',
-    }
-  )
-    .then((res) => res.json())
-    .then(res => console.log(res.headers))
-     .then((data) => console.log(data.animals))
-    .catch((err) => console.log(err));
+//console.log("Calling api ", access_token)
+//fetch( `https://api.petfinder.com/v2/animals?key=${API_KEY}&location=Atlanta,Georgia&type=dog`,
+ //   {
+//
+  //      mode: 'cors',
+//        headers: {
+ //           Authorization: `Bearer ${access_token}`,
+  //          "Access-Control-Allow-Origin": "*",
+ //           'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+  //          'Content-Type': 'application/json',
+  //          "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+ //       },
+//        method: 'GET',
+//    }
+//)
+    
+ //   .then(res => console.log(res.headers))
+//    .then((data) => console.log(data.animals))
+  //  .catch((err) => console.log(err));
