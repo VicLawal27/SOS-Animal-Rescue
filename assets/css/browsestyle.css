@@ -1,0 +1,33 @@
+body {
+    background-image: url("../images/93768343-51D8-4ABF-A248-4D9D6071D141.PNG");
+    padding: 20px;
+    font-family: Helvetica;
+  }
+  
+  #banner-message {
+    background: #e8e1e1;
+    border-radius: 4px;
+    padding: 20px;
+    font-size: 25px;
+    text-align: center;
+    transition: all 0.2s;
+    margin: 0 auto;
+    width: 500px;
+  }
+  
+  #breed_data {
+    background: #e8e1e1;
+    border-radius: 4px;
+    padding: 20px;
+    font-size: 12px;
+    text-align: left;
+    transition: all 0.2s;
+    margin: 0 auto;
+    width: 500px;
+  }
+  
+  #breed_image {
+    background: #e8e1e1;
+    margin: 0 auto;
+    width: 460px;
+  }
