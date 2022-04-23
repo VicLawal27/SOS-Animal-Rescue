@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width-device-width, initial-scale=1.0" />
     <title>SOS Animal Rescue</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Bulma CSS CDN below-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <!--BOOTSTRAP CDN is not allowed for project 1-->
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
     <link rel="stylesheet" href="assets/css/style.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
         <!--Application TItle-->
         <h1>
@@ -30,18 +32,47 @@
             <i class="fas fa-search" aria-hidden="true"></i>
         </form>
     </header>
+    <hr>
 
-    <!--TODO: Add Search Bar-->
-
-    <!--TODO: Add Random Dog Facts-->
-    <section class="facts">
-        <div id="dog-fact">
-            <h2>Random Dog Fact</h2>
-            <div id="dog-fact-txt"></div>
-            <button id="new-fact">Load Dog Facts</button>
-        </div>
+    <section class="link" id="about-us">
+      <h4>About Us</h4>
     </section>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus odio
+    accusantium iure. At corrupti placeat autem possimus tempore optio
+    repellendus delectus praesentium asperiores dolor. Aliquid quos nisi esse
+    voluptatibus quaerat. Lorem ipsum dolor, sit amet consectetur adipisicing
+    elit. Fuga libero, quam eum accusantium earum vitae id voluptatibus expedita
+    non minima quae sit nesciunt assumenda ea autem velit, saepe perferendis
+    sint. Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus odio
+    accusantium iure. At corrupti placeat autem possimus tempore optio
+    repellendus delectus praesentium asperiores dolor. Aliquid quos nisi esse
+    voluptatibus quaerat. Lorem ipsum dolor, sit amet consectetur adipisicing
+    elit. 
+    <hr>
 
+    <section class="link" id="browse">
+      <h4>Browse Animals</h4>
+    </section>
+    Fuga libero, quam eum accusantium earum vitae id voluptatibus expedita
+    non minima quae sit nesciunt assumenda ea autem velit, saepe perferendis
+    sint. Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus odio
+    accusantium iure. At corrupti placeat autem possimus tempore optio
+    repellendus delectus praesentium asperiores dolor. Aliquid quos nisi esse
+    voluptatibus quaerat. Lorem ipsum dolor, sit amet consectetur adipisicing
+    elit. Fuga libero, quam eum accusantium earum vitae id voluptatibus expedita
+    non minima quae sit nesciunt assumenda ea autem velit, saepe perferendis
+    sint.
+    <hr>
+    <div class="link">
+      <h7>Dogs</h7>
+    </div>
+    <div id="dog"></div>
+    <hr>
+    <div class="link">
+      <h7>Cats</h7>
+    </div>
+    <div id="cat"></div>
+<hr>
     <!--Sign Up Form-->
     <section class="hero">
         <div class="hero-form">
@@ -61,50 +92,26 @@
             </form>
         </div>
     </section>
+<hr>
+     <!--TODO: Add Random Dog Facts-->
+    <section class="facts">
+        <div id="dog-fact">
+            <h2>Random Dog Picture</h2>
+            <div id="dog-pic"></div>
+            <button id="new-pic">Load A Picture</button>
+        </div>
+    </section>
+
     <!--Animal Browse Section-->
     <!--Contact Us Section-->
 
     <!-- Footer -->
-    <footer class="page-footer fixed-bottom">
+    <footer>
 
         <!-- Footer Elements -->
         <div class="container">
 
-            <!--Grid row-->
-            <div class="row">
-
-                <!--Grid column-->
-                <div class="col-md-6 mb-4">
-
-                    <!-- Form -->
-                    <form class="form-inline">
-                        <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
-                            aria-label="Search">
-                        <i class="fas fa-search" aria-hidden="true"></i>
-                    </form>
-                    <!-- Form -->
-
-                </div>
-                <!--Grid column-->
-
-                <!--Grid column-->
-                <div class="col-md-6 mb-4">
-
-                    <form class="input-group">
-                        <input type="text" class="form-control form-control-sm" placeholder="Your email"
-                            aria-label="Your email" aria-describedby="basic-addon2">
-                        <div class="input-group-append">
-                            <button class="btn btn-sm btn-outline-white my-0" type="button">Sign up</button>
-                        </div>
-                    </form>
-
-                </div>
-                <!--Grid column-->
-
-            </div>
-            <!--Grid row-->
-
-        </div>
+           
         <!-- Footer Elements -->
 
         <div id="ucla" class="footer-copyright text-center py-3">© Made with love by UCLA Extension
