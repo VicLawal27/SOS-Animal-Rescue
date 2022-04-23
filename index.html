@@ -4,28 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width-device-width, initial-scale=1.0" />
     <title>SOS Animal Rescue</title>
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
+    <!--Bulma CSS CDN below-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <!--BOOTSTRAP CDN is not allowed for project 1-->
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
 
   <body>
     <header>
-      <!--Application TItle-->
-      <h1>SOS Animal Rescue</h1>
-      <!--Navigation Bar-->
-      <nav>
-        <a href="#about-us">About Us</a>
-        <a href="#browse">Browse Animals</a>
-        <a href="#contact-us">Contact Us</a>
-      </nav>
+        <!--Application TItle-->
+        <h1>
+            SOS Animal Rescue
+            <div>
+                <img class='logo' src="assets/images/image0-4.png" alt="logo" />
+            </div>
+        </h1>
+        <!--Navigation Bar-->
+        <nav>
+            <a href="#about-us">About Us</a>
+            <a href="#browse">Browse Animals</a>
+            <a href="#contact-us">Contact Us</a>
+        </nav>
+        <form class="form-inline">
+            <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
+                aria-label="Search"> 
+            <i class="fas fa-search" aria-hidden="true"></i>
+        </form>
     </header>
+    <hr>
 
-    <a name="about-us"></a>
     <section class="link" id="about-us">
-      <h2>About Us <span class="material-icons"> pets </span></h2>
+      <h4>About Us</h4>
     </section>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus odio
     accusantium iure. At corrupti placeat autem possimus tempore optio
@@ -37,7 +47,13 @@
     accusantium iure. At corrupti placeat autem possimus tempore optio
     repellendus delectus praesentium asperiores dolor. Aliquid quos nisi esse
     voluptatibus quaerat. Lorem ipsum dolor, sit amet consectetur adipisicing
-    elit. Fuga libero, quam eum accusantium earum vitae id voluptatibus expedita
+    elit. 
+    <hr>
+
+    <section class="link" id="browse">
+      <h4>Browse Animals</h4>
+    </section>
+    Fuga libero, quam eum accusantium earum vitae id voluptatibus expedita
     non minima quae sit nesciunt assumenda ea autem velit, saepe perferendis
     sint. Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus odio
     accusantium iure. At corrupti placeat autem possimus tempore optio
@@ -46,49 +62,66 @@
     elit. Fuga libero, quam eum accusantium earum vitae id voluptatibus expedita
     non minima quae sit nesciunt assumenda ea autem velit, saepe perferendis
     sint.
+    <hr>
+    <div class="link">
+      <h7>Dogs</h7>
+    </div>
+    <div id="dog"></div>
+    <hr>
+    <div class="link">
+      <h7>Cats</h7>
+    </div>
+    <div id="cat"></div>
+<hr>
+    <!--Sign Up Form-->
+    <section class="hero">
+        <div class="hero-form">
+            <h3>Sign Up For Updates</h3>
+            <p>Fill out this form to receive updates from us</p>
+            <form>
+                <label for="name">Enter full name:</label>
+                <input type="text" placeholder="Your Name" name="name" id="name" class="form-input" />
+                <label for="email">Enter email address:</label>
+                <input type="text" placeholder="Email Address" name="email" id="email" class="form-input" />
+                <label for="phone">Enter a telephone number:</label>
+                <input type="text" placeholder="Phone Number" name="phone" id="phone" class="form-input" />
 
-    <a name="browse"></a>
-    <section class="link" id="browse">
-      <h2>Browse Animals <span class="material-icons"> pets </span></h2>
+                <button type="submit">
+                    Sign Up!
+                </button>
+            </form>
+        </div>
+    </section>
+<hr>
+     <!--TODO: Add Random Dog Facts-->
+    <section class="facts">
+        <div id="dog-fact">
+            <h2>Random Dog Picture</h2>
+            <div id="dog-pic"></div>
+            <button id="new-pic">Load A Picture</button>
+        </div>
     </section>
 
-    <div class="link">
-      <h4>Dogs</h4>
-    </div>
-    <div id="dogs"></div>
+    <!--Animal Browse Section-->
+    <!--Contact Us Section-->
 
-    <div class="link">
-      <h4>Cats</h4>
-    </div>
-    <div id="cats">Cats</div>
-
-    <a name="contact-us"></a>
-    <section class="link" id="contact-us">
-      <h2>Contact Us <span class="material-icons"> pets </span></h2>
-    </section>
-
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga libero, quam
-    eum accusantium earum vitae id voluptatibus expedita non minima quae sit
-    nesciunt assumenda ea autem velit, saepe perferendis sint. Lorem ipsum dolor
-    sit amet consectetur adipisicing elit. Delectus odio accusantium iure. At
-    corrupti placeat autem possimus tempore optio repellendus delectus
-    praesentium asperiores dolor. Aliquid quos nisi esse voluptatibus quaerat.
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga libero, quam
-    eum accusantium earum vitae id voluptatibus expedita non minima quae sit
-    nesciunt assumenda ea autem velit, saepe perferendis sint. Lorem ipsum dolor
-    sit amet consectetur adipisicing elit. Delectus odio accusantium iure. At
-    corrupti placeat autem possimus tempore optio repellendus delectus
-    praesentium asperiores dolor. Aliquid quos nisi esse voluptatibus quaerat.
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga libero, quam
-    eum accusantium earum vitae id voluptatibus expedita non minima quae sit
-    nesciunt assumenda ea autem velit, saepe perferendis sint. Lorem ipsum dolor
-    sit amet consectetur adipisicing elit. Delectus odio accusantium iure. At
-    corrupti placeat autem possimus tempore optio repellendus delectus
-    praesentium asperiores dolor. Aliquid quos nisi esse voluptatibus quaerat.
-    <hr />
+    <!-- Footer -->
     <footer>
-      <h2>&#128151; Made with love by UCLA Extension</h2>
+
+        <!-- Footer Elements -->
+        <div class="container">
+
+           
+        <!-- Footer Elements -->
+
+        <div id="ucla" class="footer-copyright text-center py-3">© Made with love by UCLA Extension
+
+        </div>
+
     </footer>
+    <!-- Footer -->
+
     <script src="./assets/js/script.js"></script>
-  </body>
+</body>
+
 </html>

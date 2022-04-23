@@ -1,57 +1,55 @@
-// var accessToken =
-//   'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJVSmVUR2VNV1VaSHY5cW1ubVBNaUNrR0tEeERQeVExTDZnMmdXVmM1djNsWnQ0emxvbyIsImp0aSI6IjBlNTcyZDg0YzRhOTFkMjRhNTVkNWIzYmIzNTUwMmFjNGMzMjQxYTU0OGE5YWNjZDA1OGYyMmM0ZmE1Y2FmNjk3ZGUwODNhNjRlZjNhZWRkIiwiaWF0IjoxNjUwMTMwMzc1LCJuYmYiOjE2NTAxMzAzNzUsImV4cCI6MTY1MDEzMzk3NCwic3ViIjoiIiwic2NvcGVzIjpbXX0.KnAu8WVihr20Rpn39ITkHK7SDi7Cy5zZ3vkvVpTQFzlSOG7dwrZyL-o_uPALxBRdkcXK6puYy2Khx6CW7cBel00bBn7tCTMIAXXfC5ZLVPbweJSIGQ87DrDQMu1fLfZ27wT6x_a8N5icX34g1_5x7YyAai7nWD-jwGawi4IqlgleYTCj2QvOmJ7cK4tamhzHDWaBv3p7ARdoDMVX4v3GqRHNimrHnwADsgnIMWBgRCcf3mXCd_HzQXM_EEkliiDryCmON-zd9ndvABczFRPdDFJMmNJyym4709M3CzWydyGxRS69OBiOiF6OTV65-ZQG5IArkOs1vt6bXBKeK5VdNg';
+//Dog Facts API
+const DOG_FACTS_URL = 'https://dog-api.kinduff.com/api/facts?number=5';
+const DOG_PICS_URL = 'https://dog.ceo/api/breeds/image/random';
 
-// fetch(
-//   'https://api.petfinder.com/v2?grant_type=client_credentials&client_id=UJeTGeMWUZHv9qmnmPMiCkGKDxDPyQ1L6g2gWVc5v3lZt4zloo&client_secret=do1HzCHhMERyr3W6J3kJ5w7v9BKEatt199tK9qw1'
-//   {
-//     headers: {
-//       Authorization: `Bearer ${accessToken}`,
-//     },
-//   }
-// );
+const dogFactEl = document.getElementById('dog-fact');
+const dogPicEl = document.getElementById('dog-pic');
+const newPicBtn = document.getElementById('new-pic');
 
-var apiUrl =
-  'https://archive.org/advancedsearch.php?q=subject:google+sheets&output=json';
-var listEl = document.getElementById('dogs');
+async function loadDogPic() {
+  const response = await fetch(DOG_PICS_URL);
+  const json = await response.json();
+  console.log(json.message);
+  const dogImage = json.message;
+  const columnEl = document.createElement('div');
+  columnEl.classList.add('column');
 
-fetch(apiUrl)
-  .then(function (response) {
-    //convert to json
-    return response.json();
-  })
-  .then(function (data) {
-    //display in html
-    var docArray = data.response.docs;
-    for (var i = 0; i < docArray.length; i++) {
-      var listItem = document.createElement('li');
-      listItem.textContent = docArray[i].description;
-      listEl.appendChild(listItem);
-    }
-  })
-  .catch(function (error) {
-    //in case of error
-    console.log(error);
-  });
+  const cardEl = document.createElement('div');
+  cardEl.classList.add('card');
+  columnEl.appendChild(cardEl);
 
-// var apiUrl =
-//   'https://archive.org/advancedsearch.php?q=subject:google+sheets&output=json';
-// var listEl = document.getElementById('cats');
+  const cardImageEl = document.createElement('div');
+  cardImageEl.classList.add('card-image');
+  cardEl.appendChild(cardImageEl);
 
-// fetch(apiUrl)
-//   .then(function (response) {
-//     //convert to json
-//     return response.json();
-//   })
-//   .then(function (data) {
-//     //display in html
-//     var docArray = data.response.docs;
-//     for (var i = 0; i < docArray.length; i++) {
-//       var listItem = document.createElement('li');
-//       listItem.textContent = docArray[i].description;
-//       listEl.appendChild(listItem);
-//     }
-//   })
-//   .catch(function (error) {
-//     //in case of error
-//     console.log(error);
-//   });
+  const figureEl = document.createElement('figure');
+  figureEl.classList.add('image');
+  cardImageEl.appendChild(figureEl);
+
+  const imageEl = document.createElement('img');
+  imageEl.src = dogImage;
+  figureEl.appendChild(imageEl);
+
+  dogPicEl.appendChild(columnEl);
+}
+
+/*const options = {
+    headers: {
+        'Content-Type': 'text/plain',
+    },
+    mode: 'no-cors',
+    credentials: 'include',
+};
+
+async function loadDogFact() {
+    fetch(DOG_FACTS_URL , options, {
+        body:JSON.stringify(fact),
+    }).then(result => console.log('success====:', result))
+    .catch(error => console.log('error==========:', error));
+}*/
+
+function refreshGallery() {}
+
+//loadDogFact();
+
+newPicBtn.addEventListener('click', loadDogPic);

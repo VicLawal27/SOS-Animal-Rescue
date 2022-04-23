@@ -1,2 +1,7 @@
 .DS_Store
+<<<<<<< HEAD
 misc
+=======
+.env
+package.json
+>>>>>>> bdc11731059788526e5eb16d71de08ea302c3447
