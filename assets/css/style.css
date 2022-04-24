@@ -20,7 +20,7 @@ body{
 
 /* Header Section Styling  */
 header  {
-    background-color: #e8e1e1;
+    background-color: #e8e1e190;
     color: black;
     display: flex; 
     flex-direction: row;
@@ -54,6 +54,10 @@ header nav a {
 header nav a:hover {
   background-color: var(--primary-color);
   text-decoration: none;
+}
+
+nav {
+  margin-top: 1%;
 }
 
 .link {
@@ -183,6 +187,7 @@ footer {
     }
 
     p {
-      margin-left: 1%;
+      margin-left: 1.5%;
+      margin-right: 1%;
       margin-top: 1%;
     }
