@@ -6,34 +6,31 @@ const dogFactEl = document.getElementById('dog-fact');
 const dogPicEl = document.getElementById('dog-pic');
 const newPicBtn = document.getElementById('new-pic');
 
-async function loadDogPic()  {
-    const response = await fetch(DOG_PICS_URL);
-    const json = await response.json();
-    console.log(json.message);
-    const dogImage = json.message;
-    const columnEl = document.createElement('div');
-    columnEl.classList.add('column');
-    
-    const cardEl = document.createElement('div');
-    cardEl.classList.add('card');
-    columnEl.appendChild(cardEl);
+async function loadDogPic() {
+  const response = await fetch(DOG_PICS_URL);
+  const json = await response.json();
+  console.log(json.message);
+  const dogImage = json.message;
+  const columnEl = document.createElement('div');
+  columnEl.classList.add('column');
 
-    const cardImageEl = document.createElement('div');
-    cardImageEl.classList.add('card-image');
-    cardEl.appendChild(cardImageEl);
+  const cardEl = document.createElement('div');
+  cardEl.classList.add('card');
+  columnEl.appendChild(cardEl);
 
-    const figureEl = document.createElement('figure');
-    figureEl.classList.add('image');
-    cardImageEl.appendChild(figureEl);
+  const cardImageEl = document.createElement('div');
+  cardImageEl.classList.add('card-image');
+  cardEl.appendChild(cardImageEl);
 
-    const imageEl = document.createElement('img');
-    imageEl.src = dogImage;
-    figureEl.appendChild(imageEl);
+  const figureEl = document.createElement('figure');
+  figureEl.classList.add('image');
+  cardImageEl.appendChild(figureEl);
 
-    dogPicEl.appendChild(columnEl);
+  const imageEl = document.createElement('img');
+  imageEl.src = dogImage;
+  figureEl.appendChild(imageEl);
 
-
-
+  dogPicEl.appendChild(columnEl);
 }
 
 /*const options = {
@@ -51,9 +48,7 @@ async function loadDogFact() {
     .catch(error => console.log('error==========:', error));
 }*/
 
-function refreshGallery() {
-  
-}
+function refreshGallery() {}
 
 //loadDogFact();
 
