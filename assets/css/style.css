@@ -89,12 +89,12 @@ text-decoration: none;
   margin: 5px 0 15px 0;
 }
 
-.form-input {
+.formInput {
   border: 1px solid #642670;
   display: block;
   padding: 7px 15px;
   font-size: 16px;
-  color: white;
+  color: black;
   width: 100%;
   margin-bottom: 15px;
 }
