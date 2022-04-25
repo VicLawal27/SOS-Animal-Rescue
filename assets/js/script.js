@@ -6,50 +6,40 @@ const dogFactEl = document.getElementById('dog-fact');
 const dogPicEl = document.getElementById('dog-pic');
 const newPicBtn = document.getElementById('new-pic');
 
-async function loadDogPic() {
-  const response = await fetch(DOG_PICS_URL);
-  const json = await response.json();
-  console.log(json.message);
-  const dogImage = json.message;
-  const columnEl = document.createElement('div');
-  columnEl.classList.add('column');
 
-  const cardEl = document.createElement('div');
-  cardEl.classList.add('card');
-  columnEl.appendChild(cardEl);
-
-  const cardImageEl = document.createElement('div');
-  cardImageEl.classList.add('card-image');
-  cardEl.appendChild(cardImageEl);
-
-  const figureEl = document.createElement('figure');
-  figureEl.classList.add('image');
-  cardImageEl.appendChild(figureEl);
-
-  const imageEl = document.createElement('img');
-  imageEl.src = dogImage;
-  figureEl.appendChild(imageEl);
-
-  dogPicEl.appendChild(columnEl);
+function refreshGallery() {
+    dogPicEl.removeChild(dogPicEl.columnEl);
 }
 
-/*const options = {
-    headers: {
-        'Content-Type': 'text/plain',
-    },
-    mode: 'no-cors',
-    credentials: 'include',
-};
+async function loadDogPic() {
 
-async function loadDogFact() {
-    fetch(DOG_FACTS_URL , options, {
-        body:JSON.stringify(fact),
-    }).then(result => console.log('success====:', result))
-    .catch(error => console.log('error==========:', error));
-}*/
+        const response = await fetch(DOG_PICS_URL);
+        const json = await response.json();
+        console.log(json.message);
+        const dogImage = json.message;
+        const columnEl = document.createElement('div');
+        columnEl.classList.add('column');
 
-function refreshGallery() {}
+        const cardEl = document.createElement('div');
+        cardEl.classList.add('card');
+        columnEl.appendChild(cardEl);
 
-//loadDogFact();
+        const cardImageEl = document.createElement('div');
+        cardImageEl.classList.add('card-image');
+        cardEl.appendChild(cardImageEl);
 
-newPicBtn.addEventListener('click', loadDogPic);
+        const figureEl = document.createElement('figure');
+        figureEl.classList.add('image');
+        cardImageEl.appendChild(figureEl);
+
+        const imageEl = document.createElement('img');
+        imageEl.src = dogImage;
+        figureEl.appendChild(imageEl);
+
+        dogPicEl.appendChild(columnEl);
+
+
+
+}
+
+newPicBtn.addEventListener('click', loadDogPic)
