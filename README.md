@@ -11,14 +11,22 @@
 
 ---
 
-Creating a website which allows people in search of pets for adoption to find information about their nearest animal rescue center.
+Creating a website which encourages people to adopt rather than purchase pets, by displaying dog pictures and information about each dog breed.
 
 # Web APIs Implemented
 
 ---
 
-- AdoptAPet
-- Petfinder
-- Places API
-- RescueGroups
+- The Dog
+- Random Dog
 
+# Made with:
+
+-HTML
+-JavaScript
+-Bulma CSS
+-CSS
+
+<img width="1440" alt="Screen Shot 2022-04-24 at 10 04 36 PM" src="https://user-images.githubusercontent.com/95842420/165024527-73ea3e20-8e90-46f2-9caf-982799b8a7bd.png">
+<img width="1440" alt="Screen Shot 2022-04-24 at 10 05 06 PM" src="https://user-images.githubusercontent.com/95842420/165024531-e8399b27-e654-4d12-b40c-50622b1955ba.png">
+<img width="1440" alt="Screen Shot 2022-04-24 at 10 05 27 PM" src="https://user-images.githubusercontent.com/95842420/165024535-80b95f27-29fa-4cde-b1ac-2ff173a0200b.png">
